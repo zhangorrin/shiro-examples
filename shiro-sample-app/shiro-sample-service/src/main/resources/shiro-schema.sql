@@ -82,3 +82,15 @@ create table sys_role (
   constraint pk_sys_role primary key(id)
 ) charset=utf8 ENGINE=InnoDB;
 create index idx_sys_role_resource_ids on sys_role(resource_ids);
+
+
+
+create table `sys_token` (
+  `id` int(11) not null auto_increment,
+  `app_id` int(11) default null comment '应用号',
+  `token` varchar(100) default null,
+  `username` varchar(100) default null comment '用户名',
+  `create_time` datetime default current_timestamp,
+  `die_time` datetime default current_timestamp,
+  primary key (`id`)
+) engine=innodb auto_increment=28 default charset=utf8;
