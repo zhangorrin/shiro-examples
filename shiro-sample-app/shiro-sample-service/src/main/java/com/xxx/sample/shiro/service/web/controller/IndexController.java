@@ -2,7 +2,7 @@ package com.xxx.sample.shiro.service.web.controller;
 
 import com.xxx.sample.shiro.service.Constants;
 import com.xxx.sample.shiro.service.entity.Resource;
-import com.xxx.sample.shiro.service.entity.User;
+import com.xxx.sample.shiro.service.remote.User;
 import com.xxx.sample.shiro.service.service.AuthorizationService;
 import com.xxx.sample.shiro.service.service.ResourceService;
 import com.xxx.sample.shiro.service.web.bind.annotation.CurrentUser;

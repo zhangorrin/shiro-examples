@@ -1,6 +1,6 @@
 package com.xxx.sample.shiro.service.web.controller;
 
-import com.xxx.sample.shiro.service.entity.User;
+import com.xxx.sample.shiro.service.remote.User;
 import com.xxx.sample.shiro.service.service.OrganizationService;
 import com.xxx.sample.shiro.service.service.UserService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;

@@ -20,4 +20,18 @@ public interface RemoteServiceInterface {
     public void deleteSession(String appKey, String sessionSerializableString);
 
     public PermissionContext getPermissions(String appKey, String username);
+
+    /**
+     * 根据用户名查找用户
+     * @param username
+     * @return
+     */
+    public User findByUsername(String username);
+
+    /**
+     * 查找跨域名token
+     * @param token
+     * @return
+     */
+    public SysToken findByToken(String token);
 }

@@ -1,7 +1,7 @@
 package com.xxx.sample.shiro.service.realm;
 
 import com.xxx.sample.shiro.service.Constants;
-import com.xxx.sample.shiro.service.entity.User;
+import com.xxx.sample.shiro.service.remote.User;
 import com.xxx.sample.shiro.service.service.AuthorizationService;
 import com.xxx.sample.shiro.service.service.UserService;
 import org.apache.shiro.authc.*;

@@ -1,6 +1,6 @@
 package com.xxx.sample.shiro.service.service;
 
-import com.xxx.sample.shiro.service.entity.User;
+import com.xxx.sample.shiro.service.remote.User;
 import org.apache.shiro.crypto.RandomNumberGenerator;
 import org.apache.shiro.crypto.SecureRandomNumberGenerator;
 import org.apache.shiro.crypto.hash.SimpleHash;

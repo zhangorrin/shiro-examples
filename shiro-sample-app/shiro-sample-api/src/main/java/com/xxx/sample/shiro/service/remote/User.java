@@ -1,4 +1,4 @@
-package com.xxx.sample.shiro.service.entity;
+package com.xxx.sample.shiro.service.remote;
 
 import java.io.Serializable;
 

@@ -1,7 +1,7 @@
 package com.xxx.sample.shiro.service.service;
 
 import com.xxx.sample.shiro.service.dao.UserDao;
-import com.xxx.sample.shiro.service.entity.User;
+import com.xxx.sample.shiro.service.remote.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,15 +13,12 @@ import java.util.*;
  * <p>Version: 1.0
  */
 @Service
-
 public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserDao userDao;
     @Autowired
     private PasswordHelper passwordHelper;
-    @Autowired
-    private RoleService roleService;
 
     /**
      * 创建用户

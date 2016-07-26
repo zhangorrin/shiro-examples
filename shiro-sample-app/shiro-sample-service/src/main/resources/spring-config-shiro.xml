@@ -99,6 +99,9 @@
     </bean>
 
     <bean id="sysUserFilter" class="com.xxx.sample.shiro.service.web.shiro.filter.SysUserFilter"/>
+    <bean id="serverAdviceFilter" class="com.xxx.sample.shiro.service.web.shiro.filter.ServerAdviceFilter">
+
+    </bean>
 
     <!-- Shiro的Web过滤器 -->
     <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
@@ -108,15 +111,16 @@
             <util:map>
                 <entry key="authc" value-ref="formAuthenticationFilter"/>
                 <entry key="sysUser" value-ref="sysUserFilter"/>
+                <entry key="cass" value-ref="serverAdviceFilter"/>
             </util:map>
         </property>
         <property name="filterChainDefinitions">
             <value>
                 /remoteService = anon
-                /login = authc
+                /login = authc,cass
                 /logout = logout
                 /authenticated = authc
-                /** = user,sysUser
+                /** = user,sysUser,cass
             </value>
         </property>
     </bean>

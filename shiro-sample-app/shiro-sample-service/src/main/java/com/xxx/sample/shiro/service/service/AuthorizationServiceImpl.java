@@ -2,7 +2,7 @@ package com.xxx.sample.shiro.service.service;
 
 import com.xxx.sample.shiro.service.dao.AuthorizationDao;
 import com.xxx.sample.shiro.service.entity.Authorization;
-import com.xxx.sample.shiro.service.entity.User;
+import com.xxx.sample.shiro.service.remote.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

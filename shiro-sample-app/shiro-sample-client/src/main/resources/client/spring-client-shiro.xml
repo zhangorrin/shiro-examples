@@ -8,11 +8,14 @@
        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+    <bean id="credentialsMatcher" class="com.xxx.sample.shiro.service.client.ClientCasCredentialsMatcher"></bean>
+
     <!-- Realm实现 -->
     <bean id="remoteRealm" class="com.xxx.sample.shiro.service.client.ClientRealm">
         <property name="cachingEnabled" value="false"/>
         <property name="appKey" value="${client.app.key}"/>
         <property name="remoteService" ref="remoteService"/>
+        <property name="credentialsMatcher" ref="credentialsMatcher"/>
     </bean>
 
     <!-- 会话ID生成器 -->
@@ -72,7 +75,10 @@
         <property name="arguments" ref="securityManager"/>
     </bean>
 
-    <bean id="clientAuthenticationFilter" class="com.xxx.sample.shiro.service.client.ClientAuthenticationFilter"/>
+    <bean id="clientAuthenticationFilter" class="com.xxx.sample.shiro.service.client.ClientAuthenticationFilter">
+        <property name="loginUrlSet" value="${client.login.url}"/>
+        <property name="remoteService" ref="remoteService" />
+    </bean>
 
     <!-- Shiro的Web过滤器 -->
     <bean id="shiroFilter" class="com.xxx.sample.shiro.service.client.ClientShiroFilterFactoryBean">

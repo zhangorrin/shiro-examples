@@ -1,6 +1,7 @@
 package com.xxx.sample.shiro.service.web.taglib;
 
 import com.xxx.sample.shiro.service.entity.*;
+import com.xxx.sample.shiro.service.remote.User;
 import com.xxx.sample.shiro.service.service.*;
 import com.xxx.sample.shiro.service.utils.SpringUtils;
 import org.springframework.util.CollectionUtils;
